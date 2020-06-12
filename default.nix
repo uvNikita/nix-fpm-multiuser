@@ -109,7 +109,7 @@ let
         --input-type dir \
         --output-type ${outputFormat} \
         --name nix \
-        --version 2.3 \
+        --version 2.3.6 \
         --maintainer "Eelco Dolstra <eelco.dolstra@logicblox.com>" \
         --vendor NixOS \
         --url https://nixos.org/nix/ \
