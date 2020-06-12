@@ -1,4 +1,4 @@
 [submodule "nix"]
 	path = nix
-	url = https://github.com/Mic92/nix-1.git
-	branch = for-fpm-multiuser
+	url = https://github.com/NixOS/nix.git
+	branch = 2.3-maintenance
