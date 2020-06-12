@@ -15,6 +15,9 @@ let
 
   # Profile script installed to /etc/profile.d
   profileScript = pkgs.writeText "nix.sh" ''
+    # nix daemon should create these folders, but, for some reason, it sees only uids on ubuntu
+    mkdir -m 0755 -p /nix/var/nix/{profiles,gcroots}/per-user/$USER
+
     if [ -e /opt/nix-multiuser/nix/etc/profile.d/nix.sh ]; then
       . /opt/nix-multiuser/nix/etc/profile.d/nix.sh
       export PATH="$PATH:/opt/nix-multiuser/nix/bin"
