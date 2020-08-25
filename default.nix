@@ -4,7 +4,7 @@ let
 
   fpm = pkgs.callPackage ./fpm {};
 
-  nixRelease = (import ./nix/release.nix {});
+  nixRelease = (import ./nix/release.nix { officialRelease = true; });
 
   nix = nixRelease.build.x86_64-linux.overrideAttrs (old: {
     # FIXME: one test fails
@@ -109,7 +109,7 @@ let
         --input-type dir \
         --output-type ${outputFormat} \
         --name nix \
-        --version 2.3.6 \
+        --version 2.3.8 \
         --maintainer "Eelco Dolstra <eelco.dolstra@logicblox.com>" \
         --vendor NixOS \
         --url https://nixos.org/nix/ \
