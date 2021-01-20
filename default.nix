@@ -110,6 +110,7 @@ let
         --output-type ${outputFormat} \
         --name nix \
         --version 2.3.8 \
+        --iteration 2 \
         --maintainer "Eelco Dolstra <eelco.dolstra@logicblox.com>" \
         --vendor NixOS \
         --url https://nixos.org/nix/ \

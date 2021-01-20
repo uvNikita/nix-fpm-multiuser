@@ -26,7 +26,7 @@ cp -r /opt/nix-multiuser/bootstrap-store/* "$storedir"
 
 # Restore modification timestamps for good measure, because Nix
 # gets really unhappy if they're not canonical. FIXME: necessary?
-find "$storedir" -exec touch -c -h -d @1 '{}' \;
+# find "$storedir" -exec touch -c -h -d @1 '{}' \;
 
 # Create Nix state directories
 mkdir -p -m 1777 "$localstatedir/profiles/per-user"
